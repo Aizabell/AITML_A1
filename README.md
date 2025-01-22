@@ -46,7 +46,6 @@ The **Car Price Prediction Simulator** is a Flask-based web application designed
 
 ```bash
    git clone <https://github.com/Aizabell/AITML_A1.git>
-   cd <repository-directory>
 ```
 
 2. **Set up a Virtual Environment**:
@@ -61,6 +60,7 @@ source venv/bin/activate
 For Windows:
 
 ```bash
+python -m venv venv
 venv\Scripts\activate
 ```
 
@@ -102,7 +102,7 @@ docker-compose up -d
 docker-compose up
 ```
 
-## Access the Application\*\*
+## Access the Application
 
 - Open your browser and navigate to:
 
