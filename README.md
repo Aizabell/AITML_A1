@@ -1,5 +1,3 @@
-# AITML_A1
-
 # Car Price Prediction Simulator
 
 ## Overview
@@ -46,9 +44,17 @@ The **Car Price Prediction Simulator** is a Flask-based web application designed
 
 2. **Set up a Virtual Environment**:
 
+For Linux/Mac:
+
 ```bash
 python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate
+```
+
+For Windows:
+
+```bash
+venv\Scripts\activate
 ```
 
 3. **Install Dependencies**:
@@ -60,9 +66,48 @@ pip install -r requirements.txt
 4. **Run the Application**:
 
 ```bash
-Copy
-Edit
 python app.py
 ```
 
 The application will be accessible at http://127.0.0.1:5001.
+
+## Using Docker
+
+1. **Build the Docker Image**:
+
+```bash
+Copy
+Edit
+docker build -t <docker-username>/car-price-predictor .
+```
+
+2. **Run the Application**:
+
+```bash
+docker run -p 5001:5000 <docker-username>/car-price-predictor
+```
+
+3. **Using Docker Compose**: Ensure the docker-compose.yml file is correctly set up, then run:
+
+```bash
+docker-compose up
+```
+
+## Access the Application\*\*
+
+- Open your browser and navigate to:
+
+```bash
+http://localhost:5001
+```
+
+## Input Parameters
+
+| Parameter        | Description                                       | Example        |
+| ---------------- | ------------------------------------------------- | -------------- |
+| **Year**         | Year the car was manufactured (Optional)          | `2015`         |
+| **Max Power**    | Maximum power output of the car in bhp (Optional) | `80`           |
+| **Engine**       | Engine capacity in CC (Optional)                  | `1500`         |
+| **Owner**        | Ownership history                                 | First, Second  |
+| **Fuel Type**    | Type of fuel the car uses                         | Petrol, Diesel |
+| **Transmission** | Transmission type                                 | Manual, Auto   |
