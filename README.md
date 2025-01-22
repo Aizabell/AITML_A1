@@ -148,3 +148,9 @@ http://localhost:5001
 - Transmission: `Automatic`
 
 **Prediction**: `$18,700.00`
+
+![App Screenshot](images/HomePage.png "Car Price Prediction Simulator")
+
+![App Screenshot](images/PredictionPage.png "Car Price Prediction Simulator")
+
+![App Screenshot](images/PredictionResult.png "Car Price Prediction Simulator")
