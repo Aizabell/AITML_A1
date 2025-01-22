@@ -95,8 +95,12 @@ docker run -p 5001:5000 <docker-username>/car-price-predictor
 3. **Using Docker Compose**: Ensure the docker-compose.yml file is correctly set up, then run:
 
 ```bash
+# Start the application in detached mode
 docker-compose up -d
-# or
+```
+
+```bash
+# Start the application in interactive mode
 docker-compose up
 ```
 
