@@ -136,8 +136,6 @@ http://localhost:5001
 
 **Prediction**: `$12,500.00`
 
----
-
 **Input:**
 
 - Year: _(not provided)_
@@ -149,8 +147,18 @@ http://localhost:5001
 
 **Prediction**: `$18,700.00`
 
+---
+
+## Screenshots
+
+### Landing Page
+
 ![App Screenshot](images/HomePage.png "Car Price Prediction Simulator")
 
+### Prediction Page
+
 ![App Screenshot](images/PredictionPage.png "Car Price Prediction Simulator")
+
+### Prediction Result
 
 ![App Screenshot](images/PredictionResult.png "Car Price Prediction Simulator")
