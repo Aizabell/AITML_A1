@@ -58,3 +58,11 @@ def predict():
     # Render the prediction page
     return render_template("predict.html", prediction_history=prediction_history)
 
+def clear_history():
+    global prediction_history
+    prediction_history = []  # Clear the prediction history
+    return render_template("predict.html", prediction_history=prediction_history)
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5001, debug=True)
+
