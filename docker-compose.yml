@@ -1,0 +1,13 @@
+version: "3.10"
+
+services:
+  flask-app:
+    image: harryphoebus/ml_assignment01:latest  # Use your pushed image
+    container_name: ml_assignment_test
+    ports:
+      - "5001:5000"  # Map Flask app's port to localhost
+    restart: always
+
+
+
+

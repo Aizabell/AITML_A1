@@ -1,0 +1,226 @@
+/* General Body Style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark mode background */
+    color: #e0e0e0; /* Light gray text for contrast */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Title Styling */
+.title {
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+.paragraph{
+    margin-bottom:20px;
+}
+
+.title h1 {
+    color: #64b5f6; /* Light blue title */
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Container for all content */
+.home-container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #1e1e2f; /* Dark blue-gray container */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    
+    gap: 30px;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #1e1e2f; /* Dark blue-gray container */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    display: flex;
+    gap: 30px;
+}
+
+/* Left Box: Parameters */
+.parameters-box {
+    flex: 1;
+    background-color: #24243d; /* Slightly lighter dark blue */
+    color: #e0e0e0;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Form Elements */
+.parameters-box label {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    margin-bottom: 5px;
+    color: #90caf9; /* Light blue for labels */
+}
+
+.parameters-box input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #3a3f5c; /* Blue-gray border */
+    background-color: #1e1e2f; /* Match container background */
+    color: #ffffff;
+}
+
+.parameters-box select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #3a3f5c;
+    background-color: #1e1e2f;
+    color: #ffffff;
+}
+
+.parameters-box input[type="submit"] {
+    background-color: #2196f3; /* Blue button */
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 10px 15px;
+}
+
+.button{
+    background-color: #2196f3; /* Blue button */
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 10px 15px;
+}
+.button :hover{
+    background-color: #64b5f6
+}
+
+.parameters-box input[type="submit"]:hover {
+    background-color: #64b5f6; /* Lighter blue on hover */
+}
+
+/* Right Box: Results */
+.results-box {
+    flex: 1;
+    background-color: #24243d;
+    color: #e0e0e0;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Table Styling */
+.table-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 400px;
+    margin-top: -100px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    background-color: #1e1e2f; /* Match container background */
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #2196f3; /* Blue header */
+    color: white;
+    z-index: 1;
+}
+
+
+
+th, td {
+    border: 1px solid #3a3f5c; /* Blue-gray border */
+    padding: 12px;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+/* Adjust column widths */
+th:first-child, td:first-child { /* "No" column */
+    width: 10%;
+    text-align: center;
+}
+
+th:nth-child(2), td:nth-child(2) { /* "Price" column */
+    width: 20%;
+    text-align: justify;
+}
+
+th:nth-child(3), td:nth-child(3) { /* "Parameters Used" column */
+    width: 70%;
+    text-align: justify;
+}
+
+#clear-button {
+    background-color: #f44336; /* Red button */
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+#clear-button:hover {
+    background-color: #ff7961; /* Lighter red on hover */
+}
+
+/* Back Button Styling */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-link {
+    text-decoration: none;
+    background-color: #3b5998;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.back-link:hover {
+    background-color: #4a6ab0;
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    color: #90caf9; /* Light blue footer text */
+    font-size: 1em;
+    text-align: left;
+    width: 90%;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="home-container">
+        <h1>Welcome to Car Price Prediction</h1>
+        <p>
+            Use our model to predict car prices based on your input. Click the button below to navigate to the prediction page.
+        </p>
+        <form action="/predict" method="get">
+            <button type="submit" class="button">Go to Prediction Page</button>
+        </form>
+        <!-- <a href="/predict" class="button">Go to Prediction Page</a> -->
+    </div>
+</body>
+</html>

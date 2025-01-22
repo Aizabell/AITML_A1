@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction Simulator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="title">
+        <h1>Car Price Prediction Simulator</h1>
+    </div>
+    <div class="paragraph">
+        <h3>Instruction</h3>
+        <p>
+            You can start predicting the selling price of car by filling in the car's engine, max power and the year it is made, the fuel type,and the transmission types.
+        </p>
+    </div>
+    <div class="container">
+        <!-- Left Box: Parameters -->
+        <div class="parameters-box">
+            <h2>Enter Parameters</h2>
+            <form method="POST">
+                <label for="year">Year</label>
+                <input type="number" id="year" name="year" required>
+
+                <label for="max_power">Max Power (bhp)</label>
+                <input type="number" id="max_power" name="max_power" required>
+
+                <label for="engine">Engine (CC)</label>
+                <input type="number" id="engine" name="engine" required>
+
+                <label for="owner">Owner</label>
+                <select id="owner" name="owner" required>
+                    <option value="1">First</option>
+                    <option value="2">Second</option>
+                    <option value="3">Third</option>
+                    <option value="4">Fourth & Above</option>
+                </select>
+
+                <label for="fuel">Fuel Type</label>
+                <select id="fuel" name="fuel" required>
+                    <option value="0">Petrol</option>
+                    <option value="1">Diesel</option>
+                </select>
+
+                <label for="transmission">Transmission</label>
+                <select id="transmission" name="transmission" required>
+                    <option value="0">Manual</option>
+                    <option value="1">Automatic</option>
+                </select>
+
+                <div class="buttons predict">
+                    <input type="submit" value="Predict">
+                </div>
+            </form>
+        </div>
+
+        <!-- Right Box: Results -->
+        <div class="results-box">
+            <h2>Prediction Results</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Price</th>
+                            <th>Parameters</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for prediction in prediction_history %}
+                        <tr>
+                            <td>{{ loop.index }}</td>
+                            <td>{{ prediction.price }}</td>
+                            <td>{{ prediction.parameters }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <form method="POST">
+                <input type="hidden" name="action" value="Clear">
+                <button type="submit" id="clear-button">Clear History</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Made by Oak Soe Kyaw (ST125064)</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction Simulator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Back Button -->
+    <div class="back-button">
+        <a href="/" class="back-link">⬅ Back</a>
+    </div>
+
+    <!-- Title Section -->
+    <div class="title">
+        <h1>Car Price Prediction Simulator</h1>
+    </div>
+
+    <!-- Instruction Section -->
+    <div class="paragraph">
+        <h3>Instructions</h3>
+        <p>
+            Welcome to the Car Price Prediction Simulator! To predict a car's price:
+        </p>
+        <ul>
+            <li>Fill in the available details about the car in the form below.</li>
+            <li>If you don’t have certain information, leave those fields blank, and the system will handle missing values automatically.</li>
+            <li>Click the "Predict" button to get the estimated car price.</li>
+        </ul>
+    </div>
+
+    <!-- Prediction Container -->
+    <div class="container">
+        <!-- Input Form Section -->
+        <div class="parameters-box">
+            <h2>Enter Parameters</h2>
+            <form method="POST">
+                <!-- Year Input -->
+                <label for="year">Year (Optional)</label>
+                <input type="number" id="year" name="year" placeholder="e.g., 2015">
+
+                <!-- Max Power Input -->
+                <label for="max_power">Max Power (Optional, bhp)</label>
+                <input type="number" id="max_power" name="max_power" placeholder="e.g., 80">
+
+                <!-- Engine Input -->
+                <label for="engine">Engine (Optional, CC)</label>
+                <input type="number" id="engine" name="engine" placeholder="e.g., 1500">
+
+                <!-- Owner Dropdown -->
+                <label for="owner">Owner</label>
+                <select id="owner" name="owner" required>
+                    <option value="1">First</option>
+                    <option value="2">Second</option>
+                    <option value="3">Third</option>
+                    <option value="4">Fourth & Above</option>
+                </select>
+
+                <!-- Fuel Type Dropdown -->
+                <label for="fuel">Fuel Type</label>
+                <select id="fuel" name="fuel" required>
+                    <option value="0">Petrol</option>
+                    <option value="1">Diesel</option>
+                </select>
+
+                <!-- Transmission Dropdown -->
+                <label for="transmission">Transmission</label>
+                <select id="transmission" name="transmission" required>
+                    <option value="0">Manual</option>
+                    <option value="1">Automatic</option>
+                </select>
+
+                <!-- Predict Button -->
+                <div class="buttons predict">
+                    <input type="submit" value="Predict">
+                </div>
+            </form>
+        </div>
+
+        <!-- Prediction Results Section -->
+        <div class="results-box">
+            <h2>Prediction Results</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Predicted Price</th>
+                            <th>Parameters Used</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for prediction in prediction_history %}
+                        <tr>
+                            <td>{{ loop.index }}</td>
+                            <td>{{ prediction.price }}</td>
+                            <td>{{ prediction.parameters }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <!-- Clear Button -->
+            <form method="POST">
+                <input type="hidden" name="action" value="Clear">
+                <button type="submit" id="clear-button">Clear History</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>Made by Oak Soe Kyaw (ST125064)</p>
+    </div>
+</body>
+</html>
+
