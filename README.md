@@ -111,3 +111,29 @@ http://localhost:5001
 | **Owner**        | Ownership history                                 | First, Second  |
 | **Fuel Type**    | Type of fuel the car uses                         | Petrol, Diesel |
 | **Transmission** | Transmission type                                 | Manual, Auto   |
+
+### Example Predictions
+
+**Input:**
+
+- Year: `2015`
+- Max Power: `80 bhp`
+- Engine: `1500 CC`
+- Owner: `First`
+- Fuel: `Petrol`
+- Transmission: `Manual`
+
+**Prediction**: `$12,500.00`
+
+---
+
+**Input:**
+
+- Year: _(not provided)_
+- Max Power: `100 bhp`
+- Engine: `2000 CC`
+- Owner: `Second`
+- Fuel: `Diesel`
+- Transmission: `Automatic`
+
+**Prediction**: `$18,700.00`
