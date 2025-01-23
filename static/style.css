@@ -1,8 +1,8 @@
 /* General Body Style */
 body {
     font-family: Arial, sans-serif;
-    background-color: #121212; /* Dark mode background */
-    color: #e0e0e0; /* Light gray text for contrast */
+    background-color: #121212; 
+    color: #e0e0e0; 
     margin: 0;
     padding: 0;
     display: flex;
@@ -23,7 +23,7 @@ body {
 }
 
 .title h1 {
-    color: #64b5f6; /* Light blue title */
+    color: #64b5f6; 
     font-size: 2.5em;
     margin: 0;
 }
@@ -53,7 +53,7 @@ body {
 /* Left Box: Parameters */
 .parameters-box {
     flex: 1;
-    background-color: #24243d; /* Slightly lighter dark blue */
+    background-color: #24243d; 
     color: #e0e0e0;
     padding: 25px;
     border-radius: 10px;
@@ -67,7 +67,7 @@ body {
     text-align: left;
     display: block;
     margin-bottom: 5px;
-    color: #90caf9; /* Light blue for labels */
+    color: #90caf9; 
 }
 
 .parameters-box input {
@@ -75,8 +75,8 @@ body {
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 5px;
-    border: 1px solid #3a3f5c; /* Blue-gray border */
-    background-color: #1e1e2f; /* Match container background */
+    border: 1px solid #3a3f5c;
+    background-color: #1e1e2f; 
     color: #ffffff;
 }
 
@@ -91,7 +91,7 @@ body {
 }
 
 .parameters-box input[type="submit"] {
-    background-color: #2196f3; /* Blue button */
+    background-color: #2196f3; 
     color: white;
     font-size: 1.2em;
     border: none;
@@ -101,7 +101,7 @@ body {
 }
 
 .button{
-    background-color: #2196f3; /* Blue button */
+    background-color: #2196f3; 
     color: white;
     font-size: 1.2em;
     border: none;
@@ -114,7 +114,7 @@ body {
 }
 
 .parameters-box input[type="submit"]:hover {
-    background-color: #64b5f6; /* Lighter blue on hover */
+    background-color: #64b5f6; 
 }
 
 /* Right Box: Results */
@@ -142,13 +142,13 @@ table {
     width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
-    background-color: #1e1e2f; /* Match container background */
+    background-color: #1e1e2f; 
 }
 
 thead th {
     position: sticky;
     top: 0;
-    background-color: #2196f3; /* Blue header */
+    background-color: #2196f3; 
     color: white;
     z-index: 1;
 }
@@ -156,30 +156,30 @@ thead th {
 
 
 th, td {
-    border: 1px solid #3a3f5c; /* Blue-gray border */
+    border: 1px solid #3a3f5c; 
     padding: 12px;
     text-align: center;
     color: #e0e0e0;
 }
 
-/* Adjust column widths */
-th:first-child, td:first-child { /* "No" column */
+
+th:first-child, td:first-child { 
     width: 10%;
     text-align: center;
 }
 
-th:nth-child(2), td:nth-child(2) { /* "Price" column */
+th:nth-child(2), td:nth-child(2) { 
     width: 20%;
     text-align: justify;
 }
 
-th:nth-child(3), td:nth-child(3) { /* "Parameters Used" column */
+th:nth-child(3), td:nth-child(3) { 
     width: 70%;
     text-align: justify;
 }
 
 #clear-button {
-    background-color: #f44336; /* Red button */
+    background-color: #f44336; 
     color: white;
     font-size: 1.2em;
     padding: 10px 20px;
@@ -191,7 +191,7 @@ th:nth-child(3), td:nth-child(3) { /* "Parameters Used" column */
 }
 
 #clear-button:hover {
-    background-color: #ff7961; /* Lighter red on hover */
+    background-color: #ff7961; 
 }
 
 /* Back Button Styling */
@@ -219,7 +219,7 @@ th:nth-child(3), td:nth-child(3) { /* "Parameters Used" column */
 /* Footer */
 .footer {
     margin-top: 20px;
-    color: #90caf9; /* Light blue footer text */
+    color: #90caf9; 
     font-size: 1em;
     text-align: left;
     width: 90%;
